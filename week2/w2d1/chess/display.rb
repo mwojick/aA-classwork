@@ -32,7 +32,7 @@ class Display
     input = []
     inp = nil
     loop do
-      # system("clear")
+      system("clear")
       render
       puts " "
       p inp
