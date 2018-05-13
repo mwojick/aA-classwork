@@ -1,0 +1,9 @@
+
+<ul>
+  <li>Track Title: <%= link_to track.title, track_url(track)%> </li>
+  <li>Track ord: <%= track.ord %>  </li>
+  <li>Bonus Track?: <%= track.bonus_track %>  </li>
+  <li>Lyrics: <%= track.lyrics %> </li>
+  <li> <%= link_to "Edit Track", edit_track_url(track) %>  </li>
+  <li> <%= button_to "Delete Track", track_url(track), method: :delete %>  </li>
+</ul>

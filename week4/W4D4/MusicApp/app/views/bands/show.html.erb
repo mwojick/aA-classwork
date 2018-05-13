@@ -1,0 +1,17 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |err| %>
+  <li>  <%= err %> </li>
+  <% end %>
+<% end  %>
+
+<%= render 'band', band: @band %>
+
+<li>
+<%= link_to "New Album", "/bands/#{@band.id}/albums/new" %>
+</li>
+
+<% @band.albums.each do |album|%>
+<li>
+<%= link_to "#{album.title}", album_url(album) %>
+</li>
+<% end %>

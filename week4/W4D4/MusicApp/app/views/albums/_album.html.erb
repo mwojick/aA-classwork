@@ -1,0 +1,8 @@
+
+<ul>
+  <li>Album Title: <%= link_to album.title, album_url(album)%> </li>
+  <li>Album Year: <%= album.year %>  </li>
+  <li>Live Album?: <%= album.live_album %>  </li>
+  <li> <%= link_to "Edit Album", edit_album_url(album) %>  </li>
+  <li> <%= button_to "Delete Album", album_url(album), method: :delete %>  </li>
+</ul>

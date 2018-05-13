@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style media="screen">
+
+    </style>
+  </head>
+
+  <body>
+
+    <h2 class="flex"> <%= link_to "Music App", bands_url %></h2>
+
+    <% if logged_in? %>
+    <div class="flex_b">
+      <%= button_to "log out", session_url, method: :delete %>
+    </div>
+
+    <% else %>
+    <div class="flex_b">
+      <%= link_to "login", new_session_url %>
+    </div>
+
+    <div class="flex_b">
+      <%= link_to "sign up", new_user_url %>
+    </div>
+    <% end %>
+
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+
+<% if type == :new %>
+  <% action_url = tracks_url %>
+  <% method = :post %>
+  <% button = "Create" %>
+<% else %>
+  <% action_url = track_url(track) %>
+  <% method = :patch %>
+  <% button = "Edit" %>
+<% end %>
+
+<ul>
+  <%= button %> Track:
+</ul>
+
+<form action="<%= action_url %>" method="post">
+  <%= auth_token %>
+  <% if method == :patch %>
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+
+  <label>Track Title:
+    <input type="text" name="track[title]" value="<%= track.title %>">
+  </label>
+  <label>Track ord:
+    <input type="text" name="track[ord]" value="<%= track.ord %>">
+  </label>
+  <label>Track Album:
+
+    <select name="track[album_id]">
+      <option disabled selected value="">-- Make a Selection --</option>
+      <% Album.all.each do |album| %>
+      <option <%="selected" if album.id == track.album_id  %> value="<%= album.id %>"> <%= album.title %> </option>
+      <% end %>
+    </select>
+
+  </label>
+  <label>Track type:
+
+    <label>Regular
+      <input <%="checked" if !track.bonus_track %> type="radio" name="track[bonus_track]" value="<%= false %>">
+    </label>
+
+    <label>Bonus
+      <input <%="checked" if track.bonus_track %> type="radio" name="track[bonus_track]" value="<%= true %>">
+    </label>
+
+  </label>
+
+
+  <input type="submit" value="<%= button %> track">
+
+</form>
