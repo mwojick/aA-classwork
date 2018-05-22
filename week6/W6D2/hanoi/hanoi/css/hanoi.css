@@ -1,0 +1,58 @@
+h1 {
+  display: flex; 
+  justify-content: center; 
+}
+
+ul {
+  /* display: flex; */
+  border-bottom: 10px solid black;
+  padding: 0;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul:hover {
+  border-bottom: 10px solid blue; 
+}
+
+.hanoi {
+  display: flex;
+  justify-content: center;
+}
+
+.selected {
+  border-bottom: 10px solid red;
+}
+.selected:hover {
+  border-bottom: 10px solid red;
+}
+
+
+li {
+  list-style: none;
+  margin: auto; 
+  margin-bottom: 10px;
+}
+
+.disk-1 {
+  width: 66px;
+  height: 50px;
+  background: gray;
+  border-radius: 25px;
+}
+.disk-2 {
+  width: 132px;
+  height: 50px;
+  background: gray;
+  border-radius: 25px;
+}
+.disk-3 {
+  width: 200px;
+  height: 50px;
+  background: gray;
+  border-radius: 25px;
+}

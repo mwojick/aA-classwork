@@ -1,0 +1,43 @@
+.ttt {
+  border: 5px solid black;
+  display: inline-block;
+  /* display: flex;
+  justify-content: center; */
+  /* align-items: center; */
+  
+}
+
+.boxborder {
+  /* display: inline-block; */
+  /* margin: auto; */
+  display: flex; 
+  justify-content: center;
+}
+
+h1 {
+  display: flex; 
+  justify-content: center;
+}
+
+ul {
+  display: flex; 
+  justify-content: center;
+
+  /* justify-content: space-between;  */
+  /* border: 1px solid black;  */
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  flex-wrap: wrap; 
+  width: 100px; 
+  height: 100px;
+  background-color: grey; 
+  border: 5px solid black; 
+}
+
+li:hover {
+  background: yellow; 
+}
